@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+input:invalid{
+    background-image: url("icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+    border-color: red;
+}
+body{
+    background-image: url(bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%) ;
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.container > div{
+    flex: 1;
+    padding: 0px 20px;
+}
+h1{
+    font-size: 40px;
+    line-height: 50px;
+}
+p{
+    opacity: 0.8;
+    font-size: 15px;
+}
+.box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box p{ 
+    margin: 0;
+}
+.box-blue{
+    background-color: hsl(248, 32%, 49%);
+    padding: 20px;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 6px;
+    border: 1px solid hsl(246, 25%, 77%);
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+input.focus{
+    border: 1.3px solid hsl(248, 32%, 49%);
+    outline: none;
+}
+button{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 6px;
+    border: 1.2px solid hsl(154, 59%, 39%);
+    border-bottom-width: 3px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+button.active{
+    border-bottom-width: 1px;
+    transform: translateY(2px);
+}
+button.focus{
+    outline: none;
+}
+small{
+    color: rgb(168, 164, 164);
+    font-size: 11px;
+    margin-top: 14px;
+    display: block;
+    font-weight: 500;
+}
+small a{
+    color:  hsl(0, 100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
+.form-control small{
+    text-align: right;
+    position: absolute;
+    bottom: -19px;
+    right: 0;
+    opacity: 2;
+}
+.form-control{
+    position: relative;
+    margin-bottom: 30px;
+}
+.error-message{
+    color: red;
+}
+.input1:focus ~ .error-message, .input1:valid ~ .error-message{
+    visibility: hidden;
+}
+.input2:focus ~ .error-message, .input2:valid ~ .error-message{
+    visibility: hidden;
+}
+.input3:valid ~ .error-message{
+    visibility: hidden;
+}
+.input4:focus ~ .error-message, .input4:valid ~ .error-message{
+    visibility: hidden;
+}
+/*media responsive*/
+@media screen and (max-width:425px) {
+    h1 {
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+    }
+    p{
+        text-align: center;
+    }
+}
